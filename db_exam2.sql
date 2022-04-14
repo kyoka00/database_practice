@@ -37,4 +37,18 @@ where hometown <>'東京'
 order by major_name ASC, student_id ASC;
 
 --7
-select student_id,
+select student_id,student_name, grade
+from student
+where major_id = (select major_id
+                from major
+                where major_name='英文学')
+order by student_id ASC;
+
+--8
+select student_id, student_name, major_id
+from student
+where major_id in (select major_id
+                from student
+                group by major_id
+                having count(major_id)>=3)
+order by major_id asc, student_id asc;

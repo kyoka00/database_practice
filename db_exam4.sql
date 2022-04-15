@@ -31,7 +31,7 @@ declare
     end;
 $function$;
 
-select *, multiply(amount) from sales
+select *, multiply(amount) as カラム名なし from sales
 order by sales_id asc limit 5;
 
 --5

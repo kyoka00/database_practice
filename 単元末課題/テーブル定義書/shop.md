@@ -6,15 +6,17 @@
 
 |論理名|物理名|
 |----|----|
-|コンビニテーブル|convinience_store|
+|店テーブル|shop|
 
 カラム情報
+
 |No.|論理名|物理名|データ型|Not Null|デフォルト|備考|
 |:----|:----|:----|:----|:----|:----|:----|
-|1|年代ID|age_group_id|integer|Yes (PK)| | |
-|2|年代|age_group|integer|Yes| | |
+|1|店ID|shop_id|integer|Yes (PK)| | |
+|2|コンビニID|convinience_store_id|integer|Yes (PK)| | |
+|3|店名|shop_name|character varying| | | |
 
 インデックス情報
 |No.|インデックス名|カラムリスト| |主キー|ユニーク|備考|
 |:----|:----|:----|:----|:----|:----|:----|
-|1|age_group_pkc|age_group_id| |Yes|Yes| |
+|1|shop_pkc|shop_id,convinience_store_id| |Yes|Yes| |

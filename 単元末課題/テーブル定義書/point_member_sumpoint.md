@@ -6,15 +6,16 @@
 
 |論理名|物理名|
 |----|----|
-|コンビニテーブル|convinience_store|
+|ポイント会員ポイントテーブル|point_member_sumpoint|
 
 カラム情報
+
 |No.|論理名|物理名|データ型|Not Null|デフォルト|備考|
 |:----|:----|:----|:----|:----|:----|:----|
-|1|年代ID|age_group_id|integer|Yes (PK)| | |
-|2|年代|age_group|integer|Yes| | |
+|1|会員ID|member_id|character varying|Yes (PK)| | |
+|2|ポイント合計|sum_point|integer|Yes| | |
 
 インデックス情報
 |No.|インデックス名|カラムリスト| |主キー|ユニーク|備考|
 |:----|:----|:----|:----|:----|:----|:----|
-|1|age_group_pkc|age_group_id| |Yes|Yes| |
+|1|point_member_sumpoint_pkc|member_id| |Yes|Yes| |

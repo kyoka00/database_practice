@@ -6,15 +6,21 @@
 
 |論理名|物理名|
 |----|----|
-|コンビニテーブル|convinience_store|
+|商品情報テーブル|goods_info|
 
 カラム情報
+
 |No.|論理名|物理名|データ型|Not Null|デフォルト|備考|
 |:----|:----|:----|:----|:----|:----|:----|
-|1|年代ID|age_group_id|integer|Yes (PK)| | |
-|2|年代|age_group|integer|Yes| | |
+|1|商品ID|goods_id|character varying|Yes (PK)| | |
+|2|商品カテゴリーID|goods_category_id|integer|Yes| | |
+|3|商品名|goods_name|character varying|Yes| | |
+|4|商品金額|goods_price|integer|Yes| | |
+|5|値引額|goods_discount_price|integer| | | |
+|6|備考|extra|character varying| | | |
 
 インデックス情報
 |No.|インデックス名|カラムリスト| |主キー|ユニーク|備考|
 |:----|:----|:----|:----|:----|:----|:----|
-|1|age_group_pkc|age_group_id| |Yes|Yes| |
+|1|goods_info_pkc|goods_id| |Yes|Yes| |
+

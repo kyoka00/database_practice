@@ -6,15 +6,18 @@
 
 |論理名|物理名|
 |----|----|
-|コンビニテーブル|convinience_store|
+|従業員テーブル|staff|
 
 カラム情報
+
 |No.|論理名|物理名|データ型|Not Null|デフォルト|備考|
 |:----|:----|:----|:----|:----|:----|:----|
-|1|年代ID|age_group_id|integer|Yes (PK)| | |
-|2|年代|age_group|integer|Yes| | |
+|1|担当者ID|staff_id|integer|Yes (PK)| | |
+|2|店ID|shop_id|character varying|Yes| | |
+|3|担当者名|staff_name|character varying|Yes| | |
+|4|備考|spare|character varying| | | |
 
 インデックス情報
 |No.|インデックス名|カラムリスト| |主キー|ユニーク|備考|
 |:----|:----|:----|:----|:----|:----|:----|
-|1|age_group_pkc|age_group_id| |Yes|Yes| |
+|1|staff_pkc|staff_id| |Yes|Yes| |

@@ -15,9 +15,10 @@
 |:----|:----|:----|:----|:----|:----|:----|
 |1|支払方法ID|payment_id|integer|Yes (PK)| | |
 |2|支払方法|payment_method|character varying|Yes| | |
-|3|備考|payment_extra|character varying|Yes| | |
+|3|備考|payment_extra|character varying| | | |
 
 インデックス情報
 |No.|インデックス名|カラムリスト| |主キー|ユニーク|備考|
 |:----|:----|:----|:----|:----|:----|:----|
 |1|payment_method_pkc|payment_id| |Yes|Yes| |
+

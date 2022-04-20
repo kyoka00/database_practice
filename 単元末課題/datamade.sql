@@ -52,10 +52,10 @@ insert into point_member_sumpoint values
 insert into point_history values
 ('00000000001',000001,10,'2204190000001');
 
-
-select pf.receipt_no,sh.shop_name,sh.shop_address,sh.shop_tel,pf.purchased_datetime,
-pf.cashier_no,st.staff_id,gi.goods_name,gi.goods_price,gi.goods_discount_price,
-gc.tax_rate,ga.goods_tax,pi.tax8_tax_price, pi.tax10_tax_price,pi.purchased_price
+create view v_receipt as
+select pf.receipt_no 伝票番号,sh.shop_name 店名,sh.shop_address 住所,sh.shop_tel 電話番号,pf.purchased_datetime 売上日時,
+pf.cashier_no "レジNo",st.staff_id "従業員No",gi.goods_name 商品名,gi.goods_price 商品単価,gi.goods_discount_price 値引額,
+gc.tax_rate 消費税率,ga.goods_tax 消費税額,pi.tax8_tax_price "8%小計", pi.tax10_tax_price "10%小計",pi.purchased_price 合計金額
 
 from puchase_info pf
 
@@ -76,5 +76,3 @@ on gc.goods_category_id =gi.goods_category_id
 
 join payment_info pi
 on pi.receipt_no = pf.receipt_no;
-
-

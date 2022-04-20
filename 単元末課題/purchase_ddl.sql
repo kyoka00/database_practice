@@ -1,5 +1,5 @@
 -- Project Name : 単元末課題
--- Date/Time    : 2022/04/19 22:39:46
+-- Date/Time    : 2022/04/20 11:22:21
 -- Author       : 前野杏佳
 -- RDBMS Type   : PostgreSQL
 -- Application  : A5:SQL Mk-2
@@ -18,6 +18,7 @@ create table goods_category (
   goods_category_id integer not null
   , goods_category character varying not null
   , tax_rate integer not null
+  , recipt_no 
   , constraint goods_category_PKC primary key (goods_category_id)
 ) ;
 
@@ -90,7 +91,7 @@ create table payment_info (
   , tax8_tax_price integer
   , tax10_purchased_price integer
   , tax10_tax_price integer
-  , purchased_price integer not null
+  , purchased_price integer
   , constraint payment_info_PKC primary key (receipt_no)
 ) ;
 
@@ -99,9 +100,9 @@ create table payment_info (
 create table goods_amount (
   receipt_no character varying not null
   , goods_id character varying not null
-  , goods_count integer not null
-  , goods_sum_price integer not null
-  , goods_tax integer not null
+  , goods_count integer
+  , goods_sum_price integer
+  , goods_tax integer
   , constraint goods_amount_PKC primary key (receipt_no,goods_id)
 ) ;
 
@@ -257,4 +258,3 @@ comment on table convinience_store is 'コンビニテーブル';
 comment on column convinience_store.convinience_store_id is 'コンビニID';
 comment on column convinience_store.convinience_store_name is 'コンビニ名';
 comment on column convinience_store.recipt_no is '伝票番号';
-

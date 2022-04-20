@@ -14,9 +14,12 @@
 |:----|:----|:----|:----|:----|:----|:----|
 |1|店ID|shop_id|integer|Yes (PK)| | |
 |2|コンビニID|convinience_store_id|integer|Yes (PK)| | |
-|3|店名|shop_name|character varying| | | |
+|3|店名|shop_name|character varying|Yes| | |
+|4|店住所|shop_address|character varying|Yes| | |
+|5|店電話番号|shop_tel|character varying| | | |
 
 インデックス情報
 |No.|インデックス名|カラムリスト| |主キー|ユニーク|備考|
 |:----|:----|:----|:----|:----|:----|:----|
 |1|shop_pkc|shop_id,convinience_store_id| |Yes|Yes| |
+

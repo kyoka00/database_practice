@@ -12,7 +12,7 @@
 
 |No.|論理名|物理名|データ型|Not Null|デフォルト|備考|
 |:----|:----|:----|:----|:----|:----|:----|
-|1|会員ID|member_id|integer|Yes (PK)| | |
+|1|会員ID|member_id|character varying|Yes (PK)| | |
 |2|ポイント増減ID|point_fluctuation_id|integer|Yes (PK)| | |
 |3|ポイント増減|point_fluctuation_amount|integer|Yes| | |
 |4|伝票番号|receipt_no|character varying|Yes| | |
@@ -21,3 +21,5 @@
 |No.|インデックス名|カラムリスト| |主キー|ユニーク|備考|
 |:----|:----|:----|:----|:----|:----|:----|
 |1|point_history_pkc|point_fluctuation_id,member_id| |Yes|Yes| |
+
+
